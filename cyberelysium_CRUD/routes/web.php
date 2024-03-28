@@ -19,10 +19,10 @@ use App\Http\Controllers\StudentController;
 Route::get('/',[HomeController::class,'index']);
 
 Route::prefix('/student')->group(function () {
-    Route::get('/',[StudentController::class,'index']->name('student'));
-    Route::get('/list',[StudentController::class,'list']->name('student.list'));
-    Route::get('/{id}/get',[StudentController::class,'get']->name('student.get'));
-    Route::get('/store',[StudentController::class,'store']->name('student.store'));
+    Route::get('/',[StudentController::class,'index'])->name('student');
+    Route::get('/list',[StudentController::class,'list'])->name('student.list');
+    Route::get('/{id}/get',[StudentController::class,'get'])->name('student.get');
+    Route::post('/store',[StudentController::class,'store'])->name('student.store');
     Route::get('/{id}/status',[StudentController::class,'status'])->name('student.status');
     Route::get('/{id}/delete',[StudentController::class,'delete'])->name('student.delete');
     Route::get('/{id}/update',[StudentController::class,'update'])->name('student.update');
