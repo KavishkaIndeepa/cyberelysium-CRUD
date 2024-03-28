@@ -1,5 +1,6 @@
 <?php
 
+use auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StudentController;
@@ -22,5 +23,11 @@ Route::prefix('/student')->group(function () {
     Route::get('/list',[StudentController::class,'list']->name('student.list'));
     Route::get('/{id}/get',[StudentController::class,'get']->name('student.get'));
     Route::get('/store',[StudentController::class,'store']->name('student.store'));
+    Route::get('/{id}/status',[StudentController::class,'status'])->name('student.status');
+    Route::get('/{id}/delete',[StudentController::class,'delete'])->name('student.delete');
+    Route::get('/{id}/update',[StudentController::class,'update'])->name('student.update');
+    Route::get('/student/upload-image',[StudentController::class,'uploadImage'])->name('student.uploadImage');
 
 });
+
+require __DIR__.'/auth.php';
