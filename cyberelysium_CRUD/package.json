@@ -5,9 +5,12 @@
         "build": "vite build"
     },
     "devDependencies": {
+        "@inertiajs/vue3": "^1.0.0",
+        "@vitejs/plugin-vue": "^5.0.0",
         "axios": "^1.6.4",
-        "laravel-vite-plugin": "^0.7.2",
-        "vite": "^4.0.0"
+        "laravel-vite-plugin": "^1.0.0",
+        "vite": "^5.0.0",
+        "vue": "^3.4.21"
     },
     "dependencies": {
         "@inertiajs/inertia": "^0.11.1",
@@ -16,6 +19,5 @@
         "autoprefixer": "^10.4.19",
         "postcss": "^8.4.38",
         "tailwindcss": "^3.4.3"
-        
     }
 }
